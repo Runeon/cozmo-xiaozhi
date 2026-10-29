@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cozmo-Xiaozhi Web Flasher</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 640px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #222;
+    }
+    h1 { font-size: 1.6rem; }
+    .note {
+      background: #fff8e1;
+      border-left: 4px solid #ffc107;
+      padding: 12px 16px;
+      margin: 20px 0;
+      font-size: 0.9rem;
+    }
+    .note.warn { border-color: #f44336; background: #ffebee; }
+    esp-web-install-button {
+      --esp-web-install-button-color: #1976d2;
+    }
+  </style>
+</head>
+<body>
+  <h1>🤖 Cozmo-Xiaozhi Web Flasher</h1>
+  <p>Flashe die Xiaozhi-Firmware direkt aus dem Browser auf deinen ESP32-S3 (FreeNove FNK0104).</p>
+
+  <div class="note warn">
+    <strong>⚠️ Wichtig:</strong> Diese Binaries basieren auf der Freenove 3.5"-Version (ST7796, SPI).
+    Dein Display (ST77922, QSPI) kann Abweichungen zeigen. Für volle Kompatibilität
+    (Cozmo-Gesicht, QSPI-Geschwindigkeit) ist eine Custom-Build mit ESP-IDF nötig.
+    Siehe <a href="../docs/BUILD.md">BUILD.md</a>.
+  </div>
+
+  <h2>Flashing</h2>
+  <p>1. ESP32-S3 per USB verbinden.<br>
+     2. "Connect" klicken und den richtigen COM-Port wählen.<br>
+     3. "Install" klicken und warten.</p>
+
+  <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
+
+  <div class="note">
+    <strong>Hinweis:</strong> WebSerial benötigt HTTPS (GitHub Pages) oder localhost.
+    Chrome/Edge werden unterstützt; Firefox/Safari nicht.
+  </div>
+
+  <h2>Links</h2>
+  <ul>
+    <li><a href="../docs/FLASHING.md">Lokales Flashen (esptool)</a></li>
+    <li><a href="../docs/BUILD.md">Custom-Build (ESP-IDF)</a></li>
+    <li><a href="https://github.com/78/xiaozhi-esp32">Xiaozhi-ESP32 (Upstream)</a></li>
+  </ul>
+
+  <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+</body>
+</html>

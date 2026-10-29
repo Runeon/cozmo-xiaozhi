@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+
+# ESP-IDF build artifacts
+build/
+sdkconfig
+sdkconfig.old
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
