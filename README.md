@@ -46,6 +46,15 @@ Siehe [BUILD.md](docs/BUILD.md) für die ESP-IDF Build-Anleitung.
 3. Code in [Xiaozhi Console](https://xiaozhi.me) eingeben.
 4. Gerät gebunden → bereit.
 
-## Lizenz
+## GitHub Setup (Remote + Pages)
 
-MIT (basierend auf xiaozhi-esp32, MIT License)
+```bash
+# 1. Eigenes Repo auf GitHub erstellen (z.B. "cozmo-xiaozhi")
+# 2. Remote hinzufügen und pushen:
+git remote add origin https://github.com/<USER>/cozmo-xiaozhi.git
+git push -u origin main
+
+# 3. GitHub Pages aktivieren:
+#    Settings → Pages → Source: GitHub Actions
+#    (Workflow .github/workflows/pages.yml deployt automatisch)
+```
